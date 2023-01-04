@@ -7,7 +7,8 @@ Run `mvn post-clean verify` from the the base directory of this project to
 * [build](https://github.com/softalks/dsu.example/blob/main/bundle/pom.xml) an OSGi bundle containing a [Hello, World!](https://github.com/softalks/dsu.example/blob/main/bundle/src/main/java/com/softalks/osjee/example/Dynamic.java) servlet and deploy it to the directory [configured](https://felix.apache.org/documentation/subprojects/apache-felix-file-install.html) for bundle dropins
 * [start](https://github.com/OpenLiberty/ci.maven/blob/main/docs/start.md#start) the server with a dropins aware OSGi framework attached to the `/dynamic` context path
 
-To update the [dynamic](https://en.wikipedia.org/wiki/Dynamic_software_updating) servlet code you just need to rebuild run the command `mvn clean package` from the `/bundle` directory of the project
+Run `mvn clean package`
+* from the `/bundle` directory of the project to update the [dynamic](https://en.wikipedia.org/wiki/Dynamic_software_updating) servlet code
 
 To update the static servlet code you need to rebuild the corresponding WAR file:
 ```
