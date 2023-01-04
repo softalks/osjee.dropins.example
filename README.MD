@@ -11,5 +11,5 @@ Run `mvn post-clean verify` from the the base directory to
 Run `./loop.sh dynamic` or `./loop.sh static` to start and infinite loop requesting, respectively, the dynamic or static Hello servlet 
 
 Run `mvn clean package`
-* from `./bundle` to update the [dynamic servlet](https://github.com/softalks/dsu.example/blob/main/bundle/src/main/java/bundle/Hello.java)
+* from `./bundle` to update the [dynamic servlet](https://github.com/softalks/osjee.example/blob/main/bundle/src/main/java/bundle/Hello.java)
 * from `./contexts/static` to update the static servlet
