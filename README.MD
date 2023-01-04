@@ -4,7 +4,7 @@
 Run `mvn post-clean verify` from the the base directory to 
 * [install](https://github.com/OpenLiberty/ci.maven/blob/main/docs/create.md#create) an [Open Liberty](https://openliberty.io/) server with the [Java Servlets](https://openliberty.io/docs/latest/reference/feature/servlet-4.0.html) (4.0) and [OSGi Debug Console](https://openliberty.io/docs/latest/reference/feature/osgiConsole-1.0.html) features
 * [build](https://github.com/softalks/dsu.example/blob/main/contexts/dynamic/pom.xml) the WAR file providing the `/dynamic` web context
-* [build](https://github.com/softalks/dsu.example/blob/main/contexts/static/pom.xml) the WAR file providing the `/static` web context (that contains an static [Hello, World!](https://github.com/softalks/dsu.example/blob/main/bundle/src/main/war/Hello.java) servlet)
+* [build](https://github.com/softalks/dsu.example/blob/main/contexts/static/pom.xml) the WAR file providing the `/static` web context with the `/static/hello` servlet
 * [build](https://github.com/softalks/dsu.example/blob/main/bundle/pom.xml) an OSGi bundle containing a [Hello, World!](https://github.com/softalks/dsu.example/blob/main/bundle/src/main/bundle/Hello.java) servlet and deploy it to the directory [configured](https://felix.apache.org/documentation/subprojects/apache-felix-file-install.html) for bundle dropins
 * [start](https://github.com/OpenLiberty/ci.maven/blob/main/docs/start.md#start) the server with a dropins aware OSGi framework attached to the `/dynamic` context
 
