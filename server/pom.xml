@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<artifactId>server</artifactId>
+	<groupId>com.softalks.dsu.example</groupId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>8</maven.compiler.target>
+		<maven.compiler.source>8</maven.compiler.source>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>ROOT</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.2</version>
+			</plugin>
+			<plugin>
+				<groupId>io.openliberty.tools</groupId>
+				<artifactId>liberty-maven-plugin</artifactId>
+				<version>3.7.1</version>
+				<executions>
+					<execution>
+						<id>stop liberty server (if running)</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>create liberty server (defaultServer)</id>
+						<phase>post-clean</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>install ../configuration/features</id>
+						<phase>post-clean</phase>
+						<goals>
+							<goal>install-feature</goal>
+						</goals>
+						<configuration>
+							<features>
+								<acceptLicense>true</acceptLicense>
+								<feature>servlet-4.0</feature>
+								<feature>osgiConsole-1.0</feature>
+							</features>
+						</configuration>
+					</execution>
+					<execution>
+						<id>start liberty server (debug mode: off)</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>start</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<modelVersion>4.0.0</modelVersion>
+</project>
