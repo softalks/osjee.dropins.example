@@ -3,8 +3,8 @@
 # [DSU](https://github.com/softalks/dsu)/[OSJEE](https://github.com/softalks/osjee) Example
 Running the command `mvn post-clean verify` from the the base directory of this project allows you to 
 * [install](https://github.com/OpenLiberty/ci.maven/blob/main/docs/create.md#create) an [Open Liberty](https://openliberty.io/) server with the [Java Servlets](https://openliberty.io/docs/latest/reference/feature/servlet-4.0.html) (4.0) and [OSGi Debug Console](https://openliberty.io/docs/latest/reference/feature/osgiConsole-1.0.html) features
-* [build](https://github.com/softalks/dsu.example/blob/main/context/pom.xml) the WAR files providing the `/dynamic` and `/static` web contexts and deploy them to the server dropins directory
-* [build](https://github.com/softalks/dsu.example/blob/main/bundle/pom.xml) the OSGi bundle containing the [Hello, World!](https://github.com/softalks/dsu.example/blob/main/bundle/src/main/java/com/softalks/osjee/example/Dynamic.java) servlet and deploy it to the directory [configured](https://felix.apache.org/documentation/subprojects/apache-felix-file-install.html) for bundle dropins
+* build the WAR files providing the `/dynamic` and `/static` web contexts and deploy them to the server dropins directory
+* [build](https://github.com/softalks/dsu.example/blob/main/bundle/pom.xml) an OSGi bundle containing a [Hello, World!](https://github.com/softalks/dsu.example/blob/main/bundle/src/main/java/com/softalks/osjee/example/Dynamic.java) servlet and deploy it to the directory [configured](https://felix.apache.org/documentation/subprojects/apache-felix-file-install.html) for bundle dropins
 * [start](https://github.com/OpenLiberty/ci.maven/blob/main/docs/start.md#start) the server with an OSGi framework attached to its `/osjee` context path
 * get the HTTP resource provided by the servlet and print it using the standard output
 
