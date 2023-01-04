@@ -12,4 +12,4 @@ Run `mvn clean package`
 * from `./bundle` each time you edit the [dynamic servlet](https://github.com/softalks/osjee.example/blob/main/bundle/src/main/java/bundle/Hello.java)
 * from `./contexts/static` each time you edit the [static servlet](https://github.com/softalks/osjee.example/blob/main/contexts/static/src/main/java/war/Hello.java)
 
-To check how your changes affect running clients you can run `./loop.sh dynamic` or `./loop.sh static`
+To check how your changes affect running clients you can run `./loop.sh dynamic` or `./loop.sh static`. You should never get errors from the former when you update the dynamic servlet while the latter could not show errors but only sometimes
