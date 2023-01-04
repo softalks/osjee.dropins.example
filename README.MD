@@ -8,8 +8,8 @@ Run `mvn post-clean verify` from the the base directory to
 * [build](https://github.com/softalks/dsu.example/blob/main/contexts/static/pom.xml) and deploy the WAR file providing the `/static` web context and the `/static/hello` servlet (for testing purposes)
 * [start](https://github.com/OpenLiberty/ci.maven/blob/main/docs/start.md#start) the server with a dropins aware OSGi framework attached to the `/dynamic` context
 
-Run `./loop.sh dynamic` or `./loop.sh static` to start and infinite loop requesting, respectively, the dynamic or static Hello servlet 
-
 Run `mvn clean package`
-* from `./bundle` each time you change [dynamic servlet](https://github.com/softalks/osjee.example/blob/main/bundle/src/main/java/bundle/Hello.java)
-* from `./contexts/static` each time you change [static servlet](https://github.com/softalks/osjee.example/blob/main/contexts/static/src/main/java/war/Hello.java)
+* from `./bundle` each time you edit the [dynamic servlet](https://github.com/softalks/osjee.example/blob/main/bundle/src/main/java/bundle/Hello.java)
+* from `./contexts/static` each time you edit the [static servlet](https://github.com/softalks/osjee.example/blob/main/contexts/static/src/main/java/war/Hello.java)
+
+To check how your changes affect running clients you can run `./loop.sh dynamic` or `./loop.sh static`
