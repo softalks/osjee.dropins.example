@@ -6,7 +6,7 @@ This project exists to specify the behavior of the [osjee.dropins](https://githu
 Run `mvn post-clean verify` to 
 * [install](https://github.com/OpenLiberty/ci.maven/blob/main/docs/create.md#create) an [Open Liberty](https://openliberty.io/) server with the [Java Servlets](https://openliberty.io/docs/latest/reference/feature/servlet-4.0.html) (4.0) and [OSGi Debug Console](https://openliberty.io/docs/latest/reference/feature/osgiConsole-1.0.html) features
 * [build](https://github.com/softalks/osjee.dropins.example/blob/main/contexts/dynamic/pom.xml) the WAR file providing the `/dynamic` web context and deploy it to the server dropins directory
-* [build](https://github.com/softalks/osjee.dropins.example/blob/main/bundle/pom.xml) the OSGi bundle providing the`/dynamic/hello` servlet and deploy it to the [bundle dropins directory](https://felix.apache.org/documentation/subprojects/apache-felix-file-install.html)
+* [build](https://github.com/softalks/osjee.dropins.example/blob/main/bundle/pom.xml) the [bundle](https://en.wikipedia.org/wiki/OSGi#Bundles) providing the`/dynamic/hello` servlet and deploy it to the [configured](https://felix.apache.org/documentation/subprojects/apache-felix-file-install.html#_setup) bundle dropins directory
 * [build](https://github.com/softalks/osjee.dropins.example/blob/main/contexts/static/pom.xml) and deploy the `/static` web context and `/static/hello` servlet (for comparison purposes only)
 * [start](https://github.com/OpenLiberty/ci.maven/blob/main/docs/start.md#start) the server with a dropins aware OSGi framework attached to the `/dynamic` context
 
