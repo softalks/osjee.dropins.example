@@ -1,7 +1,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?business=7JXD6EDFHXF5C&no_recurring=0&item_name=To+allow+the+development%2C+maintenance+and+evolution+of+a+kind+of+software+that+would+not+exist+outside+the+donationware+model&currency_code=USD)
 > Before using this project you must download the [dsu](https://github.com/softalks/dsu), [osjee](https://github.com/softalks/osjee) and [osjee.dropins](https://github.com/softalks/osjee.dropins) project's code and run `mvn install` for each of them. They will be properly packaged in a near future to avoid this requirement
 # [OSJEe](https://github.com/softalks/osjee) Dropins Example
-This project exists to specify the behavior of the [osjee.dropins](https://github.com/softalks/osjee.dropins) project
+This project specifies the behavior provided by the [osjee.dropins](https://github.com/softalks/osjee.dropins) project
 
 Run `mvn post-clean verify` to 
 * [install](https://github.com/OpenLiberty/ci.maven/blob/main/docs/create.md#create) an [Open Liberty](https://openliberty.io/) server with the [Java Servlets](https://openliberty.io/docs/latest/reference/feature/servlet-4.0.html) (4.0) and [OSGi Debug Console](https://openliberty.io/docs/latest/reference/feature/osgiConsole-1.0.html) features
