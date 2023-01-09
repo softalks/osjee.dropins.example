@@ -10,7 +10,7 @@ Run `mvn post-clean verify` to
 * [build](https://github.com/softalks/osjee.dropins.example/blob/main/contexts/static/pom.xml) and deploy the `/static` web context with its `/static/hello` servlet (for comparison purposes only)
 * [start](https://github.com/OpenLiberty/ci.maven/blob/main/docs/start.md#start) the server with a dropins aware OSGi framework attached to the `/dynamic` context
 
-If you change the source code (Hello by Hi?) you must run `mvn clean package`
+After changing (Hello by Hi?) any of the servlets you must run `mvn clean package`
 * from `./bundle` to update the [dynamic servlet](https://github.com/softalks/osjee.example/blob/main/bundle/src/main/java/bundle/Hello.java) JAR
 * from `./contexts/static` to update the [static servlet](https://github.com/softalks/osjee.example/blob/main/contexts/static/src/main/java/war/Hello.java) WAR
 
