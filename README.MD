@@ -11,7 +11,7 @@ Run `mvn post-clean verify` to
 * [start](https://github.com/OpenLiberty/ci.maven/blob/main/docs/start.md#start) the server with a dropins aware OSGi framework attached to the `/dynamic` context
 
 Run `mvn clean package`
-* from `./bundle` each time you change the [dynamic servlet](https://github.com/softalks/osjee.example/blob/main/bundle/src/main/java/bundle/Hello.java)
-* from `./contexts/static` each time you change the [static servlet](https://github.com/softalks/osjee.example/blob/main/contexts/static/src/main/java/war/Hello.java)
+* from `./bundle` to build and deploy your changes on the [dynamic servlet](https://github.com/softalks/osjee.example/blob/main/bundle/src/main/java/bundle/Hello.java)
+* from `./contexts/static` to build and deploy your changes on the [static servlet](https://github.com/softalks/osjee.example/blob/main/contexts/static/src/main/java/war/Hello.java)
 
 To check how changes affect running clients run `./loop.sh dynamic` or `./loop.sh static` ([bash](https://es.wikipedia.org/wiki/Bash) required) before changing (Hello by Hi?) the corresponding servlet. You should never get errors from the former on updates of the dynamic servlet while the latter could, frequently, show [HTTP 404](https://en.wikipedia.org/wiki/HTTP_404) errors on updates of the static servlet
