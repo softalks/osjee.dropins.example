@@ -12,4 +12,4 @@ Run `mvn clean package`
 * from `./bundle` each time you change the [dynamic servlet](https://github.com/softalks/osjee.example/blob/main/bundle/src/main/java/bundle/Hello.java)
 * from `./contexts/static` each time you change the [static servlet](https://github.com/softalks/osjee.example/blob/main/contexts/static/src/main/java/war/Hello.java)
 
-To check how your changes affect running clients you can run `./loop.sh dynamic` or `./loop.sh static` ([bash](https://es.wikipedia.org/wiki/Bash) required). You should never get errors from the former when you update the dynamic servlet while the latter could (frequently) show 404 errors when you update the static servlet
+To check how changes affect running clients run `./loop.sh dynamic` and `./loop.sh static` ([bash](https://es.wikipedia.org/wiki/Bash) required) before changing the code. You should never get errors from the former on updates of the dynamic servlet while the latter could (frequently) show 404 errors on updates of the static servlet
